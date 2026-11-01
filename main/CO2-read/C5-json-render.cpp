@@ -39,6 +39,7 @@ int batt_level = 0;
 #include "fast/ubuntu20.h"
 #include "fast/ubuntu30.h"
 #include "fast/ubuntu40.h"
+#include "fast/ubuntu40b.h"
 
 #include "fast/robotomono12.h"
 #include "fast/robotomono20.h"
@@ -52,6 +53,7 @@ static const FastJsonDLFont g_fonts[] = {
     { "Ubuntu20", ubuntu20 },
     { "Ubuntu30", ubuntu30 },
     { "Ubuntu40", ubuntu40 },
+    { "Ubuntu40b", ubuntu40b },
     { "RobotoMono12", robotomono12 },
     { "RobotoMono20", robotomono20 },
     { "RobotoMono30", robotomono30 },
