@@ -1290,7 +1290,7 @@ static void qr_draw_task(void *arg)
         const int y_offset = 90;
         const int border = 2;
 
-        epaper->fillRect(0, y_offset, EPD_WIDTH, 300, 0xF);
+        epaper->fillScreen(0xF);
 
         for (int y = -2; y < size + border; y++) {
             for (int x = -2; x < size + border; x++) {
@@ -1318,8 +1318,7 @@ static void qr_draw_task(void *arg)
         snprintf(textbuffer, sizeof(textbuffer), "%s welcomes you!", WEB_HOST);
         epaper->drawString(textbuffer, 462, 360);
 
-        BB_RECT box{ .x = 50, .y = 50, .w = EPD_WIDTH-60, .h = 360 };
-        epaper->fullUpdate(false, true, &box);
+        epaper->fullUpdate();
     }
 }
 
